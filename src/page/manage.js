@@ -25,10 +25,12 @@ import promotions1 from '../assets/images/promotions (2).png';
 import promotions2 from '../assets/images/promotions (3).png';
 import promotions3 from '../assets/images/promotions (4).png';
 import promotions4 from '../assets/images/promotions (5).png';
+import Navigation from '../routes/Navigation';
 function Manage() {
 
     return (
         <>
+            <Navigation />
             <div className='realtive w-full py-12 lg:h-full md:h-[300px] sm:h-[250px] bg-about grid grid-cols-12 gap-6  bg-no-repeat bg-cover p-4'>
                 <div className='col-span-6'></div>
 

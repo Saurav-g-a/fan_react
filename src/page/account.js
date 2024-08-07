@@ -1,5 +1,6 @@
 import React from 'react'
 import Footer from '../common/footer';
+import Navigation from '../routes/Navigation';
 import insta from '../assets/images/insta.svg';
 import tiktok from '../assets/images/tiktok.svg';
 import banner from '../assets/images/banner1.png';
@@ -90,8 +91,9 @@ function Account() {
     );
     return (
         <>
+            <Navigation />
             <div className='realtive w-full py-12 lg:h-full md:h-[300px] sm:h-[250px] bg-about bg-no-repeat bg-cover p-4'>
-                <div className='px-20 w-full flex mt-12'>
+                <div className='px-20 w-full flex mt-12 mb-8'>
                     <div>
                         <img src={User} className='max-w-[100px] h-[100px]' alt='user' />
                     </div>
@@ -592,9 +594,9 @@ function Account() {
             <div className='py-8 px-20 bg-[#061115] '>
                 <div className='grid grid-cols-2 gap-4'>
                     <div className='col-span-2'>
-                        <div className='border-[#FFFFFF33] border p-2 rounded-3xl relative '>
+                        <div className='p-2 rounded-3xl relative'>
                             <p className='font-Zuume text-3xl text-white uppercase font-semibold mb-3 ml-3 mt-3'>Promotions</p>
-                            <div className='grid grid-cols-6 gap-4'>
+                            <div className='grid grid-cols-5 gap-4'>
                                 <div className='bg-[#081A20] p-2 mb-2 rounded-3xl w-full'>
                                     <img src={promotions} className='' alt='promotions' />
                                     <p className='text-white self-center font-Lufga mt-3 font-semibold'>FuelFest Events - Discount <br /><span className='text-[#657784] mt-2'> Code: ZL1BABE for tickets </span></p>

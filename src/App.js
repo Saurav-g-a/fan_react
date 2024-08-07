@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { useRoutes } from 'react-router-dom';
-import Navigation from './routes/Navigation';
+
 import routes from './routes/routes';
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div>
-      <Navigation />
+
       {routing}
     </div>
   );
