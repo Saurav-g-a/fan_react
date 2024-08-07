@@ -25,6 +25,8 @@ import promotions1 from '../assets/images/promotions (2).png';
 import promotions2 from '../assets/images/promotions (3).png';
 import promotions3 from '../assets/images/promotions (4).png';
 import promotions4 from '../assets/images/promotions (5).png';
+import frame from '../assets/images/accountFram.png';
+import image from '../assets/images/Image.png';
 import Navigation from '../routes/Navigation';
 function Manage() {
 
@@ -32,7 +34,12 @@ function Manage() {
         <>
             <Navigation />
             <div className='realtive w-full py-12 lg:h-full md:h-[300px] sm:h-[250px] bg-about grid grid-cols-12 gap-6  bg-no-repeat bg-cover p-4'>
-                <div className='col-span-6'></div>
+                <div className='col-span-6'>
+                    <div className='relative'>
+                        <img src={frame} alt='frame' />
+                        <img src={image} className='w-[55%] absolute top-[31px] right-[23px]' alt='image' />
+                    </div>
+                </div>
 
                 <div className='col-span-6 mx-auto self-center py-10'>
                     <p className='text-[#8A30E4] font-hallelujah text-[21px]'>Creator Account </p>
