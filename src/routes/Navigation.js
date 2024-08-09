@@ -11,8 +11,8 @@ function Navigation() {
         </div>
         <div className='lg:col-span-9 md:col-span-1 sm:grid-cols-1 s:col-span-1'>
           <div className='flex justify-end'>
-            <a href='/login' className='md:hidden lg:block sm:hidden s:hidden border-[1px] border-[#FFFFFF80] p-4 rounded-full font-Lufga text-white'>Login In as a <b> Fan </b></a>
-            <a href='/fanLogin' className='md:hidden lg:block sm:hidden s:hidden bg-[#FF007A] border-[1px] border-[#FF007A] font-Lufga p-4 mx-4 text-white rounded-full'>Login In as a <b> Creator </b></a>
+            <a href='/register' className='md:hidden lg:block sm:hidden s:hidden border-[1px] border-[#FFFFFF80] p-4 rounded-full font-Lufga text-white'>Login In as a <b> Fan </b></a>
+            <a href='/login' className='md:hidden lg:block sm:hidden s:hidden bg-[#FF007A] border-[1px] border-[#FF007A] font-Lufga p-4 mx-4 text-white rounded-full'>Login In as a <b> Creator </b></a>
             <img src={Menu} alt='menu' />
           </div>
         </div>

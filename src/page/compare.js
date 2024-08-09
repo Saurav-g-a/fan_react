@@ -1,10 +1,16 @@
 import React from 'react'
-import product2 from '../assets/images/profile (1).png';
+import product from '../assets/images/profile (1).png';
+import product2 from '../assets/images/profile (2).png';
+import product1 from '../assets/images/profile (3).png';
 import banner from "../assets/images/welcome.png";
 import Footer from '../common/footer';
 import CustomAccordion from '../common/accordion';
 import search from '../assets/images/searchButton.png';
+import compare from '../assets/images/comparevs.png';
 import Navigation from '../routes/Navigation';
+import Carousel from 'react-multi-carousel';
+import left from '../assets/images/left.svg';
+import CustomRight from '../assets/images/right.svg';
 
 function Compare() {
 
@@ -42,7 +48,37 @@ function Compare() {
       content: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.'
     },
   ];
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 1
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 1
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 1
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1
+    }
+  };
 
+  const CustomLeftArrow = ({ onClick }) => (
+    <button className="custom-left-arrow absolute bottom-0" onClick={onClick}>
+      <img src={left} alt='left' />
+    </button>
+  );
+
+  const CustomRightArrow = ({ onClick }) => (
+    <button className="custom-right-arrow absolute bottom-0 right-[-1px]" onClick={onClick}>
+      <img src={CustomRight} alt='left' />
+    </button>
+  );
   return (
     <>
       <Navigation />
@@ -82,6 +118,53 @@ function Compare() {
         </div>
 
       </div>
+
+      <div className='bg-[#061115] p-5'>
+
+        <div className='grid grid-cols-12 gap-4 bg-campareSection bg-no-repeat bg-contain py-20	 bg-top'>
+          <div className='col-span-12 py-20'></div>
+          <div className='col-span-2'></div>
+          <div className='col-span-3'>
+            <div className='border border-[#FF007A] bg-[#FF007A26] rounded-3xl p-3 mx-5 -rotate-6	'>
+              <p className='text-[#FF007A] font-hallelujah text-center mb-3'>1st Content Creator</p>
+              <Carousel responsive={responsive}
+                customLeftArrow={<CustomLeftArrow />}
+                customRightArrow={<CustomRightArrow />}
+                renderDotsOutside={true}>
+                <img src={product} className='w-full mx-auto rounded-se-[28px]' alt='item1' />
+                <img src={product2} className='w-full mx-auto rounded-se-[28px]' alt='item1' />
+                <img src={product1} className='w-full mx-auto rounded-se-[28px]' alt='item1' />
+              </Carousel>
+              <p className='text-white font-Lufga font-semibold text-center mt-3'>Thomas Blanchais</p>
+              <p className='text-[#9F8C95] font-Lufga text-center text-sm'>Autumn Spooner | ZL1BABE x G80BABE</p>
+              <p className='text-[#9F8C95] font-Lufga text-center text-[12px]'>Camaro ZL1 & G80 M3 Competition 🏎️</p>
+            </div>
+          </div>
+          <div className='col-span-2 self-center'>
+            {/* <img src={compare} className='self-center' alt='compare' /> */}
+          </div>
+          <div className='col-span-3'>
+            <div className='border border-[#FF007A] bg-[#FF007A26] rounded-3xl p-3 mx-5 rotate-6 backdrop-blur-lg	'>
+              <p className='text-[#FF007A] font-hallelujah text-center mb-3'>2nd Content Creator</p>
+              <Carousel responsive={responsive}
+                customLeftArrow={<CustomLeftArrow />}
+                customRightArrow={<CustomRightArrow />}
+                renderDotsOutside={true}>
+                <img src={product} className='w-full mx-auto rounded-se-[28px]' alt='item1' />
+                <img src={product2} className='w-full mx-auto rounded-se-[28px]' alt='item1' />
+                <img src={product1} className='w-full mx-auto rounded-se-[28px]' alt='item1' />
+              </Carousel>
+              <p className='text-white font-Lufga font-semibold text-center mt-3'>Thomas Blanchais</p>
+              <p className='text-[#9F8C95] font-Lufga text-center text-sm'>Autumn Spooner | ZL1BABE x G80BABE</p>
+              <p className='text-[#9F8C95] font-Lufga text-center text-[12px]'>Camaro ZL1 & G80 M3 Competition 🏎️</p>
+            </div>
+          </div>
+          <div className='col-span-2'></div>
+        </div>
+      </div>
+
+
+
       <div className='grid grid-cols-12  gap-2 px-12 py-8 bg-[#061115]'>
         <div className='col-span-4 self-center'>
           <p className='font-Zuume uppercase text-white font-bold leading-none text-[65px]'>Welcome to <br />
